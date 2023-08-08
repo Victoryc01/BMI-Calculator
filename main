@@ -1,0 +1,24 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+       //Implement a BMI calculator that takes input from a user and returns the BMI result.
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter your weight: ");
+        double weight = sc.nextDouble();
+        System.out.println("Please enter your height: ");
+        double height = sc.nextDouble();
+        double h2 = height * height;
+        double result = (weight / h2) *10000;
+        if (result >= 25.0){
+            System.out.println("Your BMI is " + result +(" ")+("You are OVER_WEIGHT"));
+        } else if (result >= 18.5 && result <= 24.9) {
+            System.out.println("Your BMI is " + result +(" ")+("Your weight is NORMAL"));
+        } else {
+            System.out.println("Your BMI is " + result +(" ")+("You are UNDER_WEIGHT"));
+        }
+    }
+}
